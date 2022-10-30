@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "fe3be16a-1285-43d5-9916-5c2c68c146a9",
+		"name": "neo_soft_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/getAllnotes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5lb3NvZnQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTU1NTYyMjIsImV4cCI6MTYxNTU1NzQyMn0.sjTKFPXyScVWws5sTDXPMywVrekc8qm89FzfsxMh0KU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/getAllnotes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getAllnotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/getnotesBy_emailid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5lb3NvZnQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTU1NTYyMjIsImV4cCI6MTYxNTU1NzQyMn0.sjTKFPXyScVWws5sTDXPMywVrekc8qm89FzfsxMh0KU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"emailid\": \"test@test.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/getnotesBy_emailid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getnotesBy_emailid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/update_notes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5lb3NvZnQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTU1NTYyMjIsImV4cCI6MTYxNTU1NzQyMn0.sjTKFPXyScVWws5sTDXPMywVrekc8qm89FzfsxMh0KU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"emailid\": \"test@test.com\",\n    \"title\": \"irfan\",\n    \"notes\": \"Hi neo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/update_notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"update_notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/create_notes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5lb3NvZnQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTU1NTYyMjIsImV4cCI6MTYxNTU1NzQyMn0.sjTKFPXyScVWws5sTDXPMywVrekc8qm89FzfsxMh0KU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"emailid\": \"test@test.com\",\n    \"title\": \"irfan\",\n    \"notes\": \"Hellow\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/create_notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"create_notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"neosoft\",\n    \"password\": \"password123\",\n    \"role\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
